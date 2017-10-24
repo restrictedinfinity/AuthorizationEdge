@@ -1,0 +1,13 @@
+{
+  "_comment": "Example Authorization Policy. Ray is a premium user",
+  "Version": "Weather-Edge-2017-10-30",
+  "UserName": "Ray",
+  "Expiration": 1506814158116,
+  /*Epoc expiration time*/
+  "Statement": {
+    "Effect": "PREMIUM-ACCESS",
+    /*Permissible values PREMIUM-ACCESS for premium users, and BASIC-ACCESS for basic users*/
+    "Action": "GET",
+    "Resource": "/api/*"
+  }
+}
