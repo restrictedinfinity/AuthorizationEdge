@@ -6,6 +6,8 @@ const functionLocation = JSON.stringify(process.env.AWS_REGION);
 /*Authorization and secrets*/
 const authPolicyCookieName = "x-clima-edge-authorization=";
 const authPolicyEncryptionAlgorithm = 'aes-256-ctr';
+
+/* TODO: Fetch encryption key from AWS KMS on container initiailization, instead of bundling along with the code*/
 const authPolicyEncryptionKey = 'LLotVJ?jq?nhF*Q8&2f'; //KEEP THIS SECRET, anyone with access to this key can get access. 
 
 exports.handler = (event, context, callback) => {
